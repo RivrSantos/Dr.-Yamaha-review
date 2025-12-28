@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual melhor óleo para Fazer 250 | Dr. Yamaha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #004a93;
+            --pastel-yellow: #fdfd96;
+            --ml-yellow: #fff159;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --bg-body: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Cabeçalho --- */
+        header {
+            background: var(--white);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-box img {
+            height: 40px;
+        }
+
+        .brand-name {
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--ml-yellow);
+            /* Dourado/Amarelo Pastel Escuro para contraste */
+            background-color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .btn-guia {
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(0, 74, 147, 0.4);
+            }
+
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(0, 74, 147, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(0, 74, 147, 0);
+            }
+        }
+
+        /* --- Introdução Técnica --- */
+        .intro-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .intro-section h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .intro-section p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* --- Lista de Produtos (Layout Lateral) --- */
+        .product-list {
+            margin-bottom: 50px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            border: 1px solid #eee;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .product-img {
+            width: 100px;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        .product-content {
+            flex-grow: 1;
+        }
+
+        .product-content h3 {
+            margin: 0 0 10px 0;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .product-content p {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .btn-ml {
+            display: inline-block;
+            background: var(--ml-yellow);
+            color: #333;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            border: 1px solid #ddd;
+        }
+
+        /* --- Tabela Resumo --- */
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 40px 0;
+            font-size: 0.9rem;
+        }
+
+        .summary-table th {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .summary-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* --- Opiniões (Lado a Lado) --- */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .review-card {
+            background: #f1f3f5;
+            padding: 20px;
+            border-radius: 10px;
+            font-style: italic;
+            border-left: 4px solid var(--primary);
+        }
+
+        /* --- Apoio com Animação --- */
+        .support-section {
+            background: var(--text-dark);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .support-section::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transform: rotate(45deg);
+            animation: shine 4s infinite linear;
+        }
+
+        @keyframes shine {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        /* --- Apresentação Dr. Yamaha (Final) --- */
+        .author-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 60px 0;
+            border: 1px solid #eee;
+        }
+
+        .author-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #eee;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        @media (max-width: 600px) {
+
+            .product-card,
+            .author-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: pulse-whatsapp 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128c7e;
+            color: #FFF;
+        }
+
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        /* Animação de Pulso */
+        @keyframes pulse-whatsapp {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Ajuste para Mobile */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-float svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <a href="#" class="logo-box">
+                <img src="images/logocon.png" alt="Logo">
+                <span class="brand-name">DR. YAMAHA</span>
+            </a>
+            <a href="https://mercadolivre.com/sec/1u5eG77" class="btn-guia">GUIA DE PRODUTOS</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="intro-section">
+            <h1>Qual melhor óleo para Fazer 250?</h1>
+            <p>A Yamaha Fazer 250 possui um dos motores mais robustos do Brasil, mas sua longevidade depende de óleos
+                que atendam às normas <strong>JASO MA2</strong> e <strong>API SL ou superior</strong>. Entender a
+                conexão técnica entre a viscosidade e a proteção das engrenagens é o que separa um motor eterno de um
+                motor com problemas prematuros. Abaixo, analisamos as principais opções do mercado brasileiro para que
+                você decida entre o custo-benefício e a performance extrema.</p>
+        </section>
+
+        <section id="artigo" class="product-list">
+            <div class="product-card">
+                <img src="https://http2.mlstatic.com/D_Q_NP_808519-MLB53334839412_012023-R.webp" class="product-img"
+                    alt="Yamalube">
+                <div class="product-info">
+                    <h3> Yamalube 20W-50 Mineral</h3>
+                    <p>O lubrificante genuíno da marca. Sua principal vantagem é o equilíbrio perfeito de aditivos para
+                        componentes internos originais Yamaha, garantindo que a garantia da moto seja preservada. É a
+                        escolha segura para uso urbano padrão.</p>
+                    <a href="https://mercadolivre.com/sec/1cRztec" target="_blank"
+                        class="btn-ml">Ver no Mercado Livre</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://http2.mlstatic.com/D_Q_NP_938621-MLA99924935307_112025-R.webp"
+                    class="product-img" alt="Motul">
+                <div class="product-info">
+                    <h3> Motul 3000 ou 5100</h3>
+                    <p>Referência em performance. O Motul oferece uma película lubrificante extremamente resistente,
+                        sendo ideal para quem exige mais da Fazer em rodovias ou climas muito quentes. Proporciona
+                        trocas de marcha mais precisas.</p>
+                    <a href="https://mercadolivre.com/sec/1Z6NQSd"
+                        target="_blank" class="btn-ml">Ver no Mercado Livre</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://http2.mlstatic.com/D_Q_NP_855140-MLA99447179974_112025-R.webp" class="product-img"
+                    alt="Mobil">
+                <div class="product-info">
+                    <h3> Mobil Super Moto 4T</h3>
+                    <p>Uma das opções mais tradicionais do Brasil. Destaca-se pelo alto poder de limpeza, evitando a
+                        formação de borras no motor mesmo em regimes de "anda e para" intenso das grandes cidades.</p>
+                    <a href="https://mercadolivre.com/sec/1KekY5R" target="_blank" class="btn-ml">Ver no Mercado Livre</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://http2.mlstatic.com/D_Q_NP_920433-MLA99449468484_112025-R.webp" class="product-img"
+                    alt="Lubrax">
+                <div class="product-info">
+                    <h3> Lubrax Moto 4T</h3>
+                    <p>Excelente custo-benefício nacional. O Lubrax entrega uma proteção sólida atendendo aos requisitos
+                        mínimos da Yamaha com um preço mais acessível, sendo uma escolha inteligente para trocas
+                        preventivas rigorosas.</p>
+                    <a href="https://mercadolivre.com/sec/1P7Y741" target="_blank" class="btn-ml">Ver no
+                        Mercado Livre</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://http2.mlstatic.com/D_Q_NP_995782-MLA84967827405_052025-R.webp" class="product-img"
+                    alt="Castrol">
+                <div class="product-info">
+                    <h3> Castrol Actevo</h3>
+                    <p>Famoso pela tecnologia de "moléculas de proteção ativa" que aderem às partes críticas do motor
+                        mesmo quando desligado, garantindo uma partida a frio muito mais segura e com menos desgaste.
+                    </p>
+                    <a href="https://mercadolivre.com/sec/1g1p5cY" target="_blank" class="btn-ml">Ver no
+                        Mercado Livre</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="text-align: center;">Tabela resumo: Qual escolher?</h2>
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th>Marca</th>
+                        <th>Vantagem Principal</th>
+                        <th>Recomendação Dr. Yamaha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Yamalube</td>
+                        <td>Garantia e Originalidade</td>
+                        <td>Uso padrão Yamaha com 100% de garantia (segurança total)</td>
+                    </tr>
+                    <tr>
+                        <td>Motul</td>
+                        <td>Performance e Viagens</td>
+                        <td>Para quem busca suavidade no câmbio</td>
+                    </tr>
+                    <tr>
+                        <td>Mobil</td>
+                        <td>Confiabilidade e Custo-benefício</td>
+                        <td>Uso urbano intenso, ideal para trabalho (Motoboy)</td>
+                    </tr>
+                    <tr>
+                        <td>Lubrax</td>
+                        <td>Preço Baixo</td>
+                        <td>Trocas Preventivas, ideal para frotas e uso basico</td>
+                    </tr>
+                    <tr>
+                        <td>Castrol</td>
+                        <td>Proteção na Partida</td>
+                        <td>Motos que ficam paradas por muito tempo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section style="margin: 50px 0; background: #e9ecef; padding: 30px; border-radius: 12px;">
+            <h3>Conclusão</h3>
+            <p>Tecnicamente, não existe um "óleo milagroso", mas sim o óleo adequado ao seu regime de uso. Se você
+                prioriza a originalidade e a saúde de longo prazo seguindo o manual, o <strong>Yamalube</strong> é
+                imbatível. Para condutores que buscam performance e suavidade nas marchas sob calor extremo, o
+                <strong>Motul</strong> se destaca. Caso o foco seja economia sem abrir mão da segurança, o
+                <strong>Lubrax e Mobil</strong> cumprem o papel com maestria. A recomendação do Dr. Yamaha é:
+                independente da marca escolhida entre estas cinco, mantenha o nível sempre correto e nunca ultrapasse o
+                prazo de troca.
+            </p>
+        </section>
+
+        <section>
+            <h2 style="text-align: center;">Opiniões de quem comprou</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    "Uso Yamalube desde zero km. Minha Fazer está com 80 mil km e o motor nunca bateu nada." -
+                    <strong>Dayvdson Silva</strong>
+                </div>
+                <div class="review-card">
+                    "Segui a dica do Dr. Yamaha e mudei para o Motul, a moto ficou muito mais macia para trocar marcha."
+                    - <strong>Manilson Froes</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="support-section">
+            <h2>Apoie o Dr. Yamaha </h2>
+            <p>Gostou deste review técnico? Ajude-nos a manter o canal independente.</p>
+            <div style="background: rgba(255,255,255,0.1); display: inline-block; padding: 15px; border-radius: 8px;">
+                <strong>PIX: rivaldoyamaha.rf@gmail.com</strong>
+            </div>
+        </section>
+
+        <section class="author-box">
+            <img src="images/river.jpg" alt="Dr. Yamaha" class="author-img">
+            <div class="author-info">
+                <h2 style="margin-top: 0;">Sobre</h2>
+                <p><strong>Dr. Yamaha</strong> é técnico especializado com mais de 13 anos de experiência direta em
+                    concessionárias autorizadas Yamaha. Este site nasceu da necessidade de entregar informações técnicas
+                    honestas e simplificadas para proprietários que realmente cuidam de suas máquinas.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Dr. Yamaha © 2025 - Consultoria e Reviews Técnicos</p>
+            <p style="max-width: 600px; margin: 10px auto;"><strong>Nota:</strong> Como afiliados do Mercado Livre,
+                podemos receber uma comissão por vendas através dos links acima, sem custo extra para você. Isso
+                financia nossas análises técnicas independentes.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5538988340443?text=Olá%20Dr.%20Yamaha!%20Vi%20seu%20review%20de%20produtos%20e%20gostaria%20de%20tirar%20uma%20dúvida."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Fale com o Dr. Yamaha">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+    </a>
+</body>
+
+</html>
