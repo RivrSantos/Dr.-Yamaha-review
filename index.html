@@ -117,26 +117,30 @@
         .product-list {
             margin-bottom: 50px;
         }
-        /* Força a imagem a ficar ao lado do texto em qualquer ecrã */
         .product-card {
-            display: flex;         /* Mantém lado a lado */
-            align-items: flex-start;
-            gap: 15px;
-            padding: 15px;
-        }        
-        .product-img { 
-            width: 80px;           /* Tamanho reduzido para não ocupar o ecrã todo */
-            height: auto; 
-            flex-shrink: 0;        /* Impede a imagem de ser "esmagada" */
-        }
-        .product-content { 
-            flex-grow: 1;          /* O texto ocupa o restante espaço */
+            background: var(--white);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            border: 1px solid #eee;
+            transition: 0.3s;
         }
         .product-card:hover {
             border-color: var(--primary);
             transform: translateY(-3px);
         }
+        .product-img {
+            width: 100px;
+            height: auto;
+            flex-shrink: 0;
+        }
 
+        .product-content {
+            flex-grow: 1;
+        }
         .product-content h3 {
             margin: 0 0 10px 0;
             color: var(--primary);
@@ -502,7 +506,6 @@
         <section class="author-box">
             <img src="images/river.jpg" alt="Dr. Yamaha" class="author-img">
             <div class="author-info">
-                <h2 style="margin-top: 0;">Sobre</h2>
                 <p><strong>Dr. Yamaha</strong> é técnico especializado com mais de 13 anos de experiência direta em
                     concessionárias autorizadas Yamaha. Este site nasceu da necessidade de entregar informações técnicas
                     honestas e simplificadas para proprietários que realmente cuidam de suas máquinas.</p>
