@@ -61,7 +61,7 @@
         .brand-name {
             font-weight: 800;
             font-size: 1.4rem;
-            color: var(--ml-yellow);
+            color: var(--primary);
             /* Dourado/Amarelo Pastel Escuro para contraste */
             background-color: white;
             padding: 2px 8px;
@@ -113,37 +113,28 @@
             max-width: 800px;
             margin: 0 auto;
         }
-
         /* --- Lista de Produtos (Layout Lateral) --- */
         .product-list {
             margin-bottom: 50px;
         }
-
+        /* Força a imagem a ficar ao lado do texto em qualquer ecrã */
         .product-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            border: 1px solid #eee;
-            transition: 0.3s;
+            display: flex;         /* Mantém lado a lado */
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px;
+        }        
+        .product-img { 
+            width: 80px;           /* Tamanho reduzido para não ocupar o ecrã todo */
+            height: auto; 
+            flex-shrink: 0;        /* Impede a imagem de ser "esmagada" */
         }
-
+        .product-content { 
+            flex-grow: 1;          /* O texto ocupa o restante espaço */
+        }
         .product-card:hover {
             border-color: var(--primary);
             transform: translateY(-3px);
-        }
-
-        .product-img {
-            width: 100px;
-            height: auto;
-            flex-shrink: 0;
-        }
-
-        .product-content {
-            flex-grow: 1;
         }
 
         .product-content h3 {
